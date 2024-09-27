@@ -16,15 +16,12 @@ ul {
 
 body {
   font-family: 'Roboto', sans-serif;
-  display: flex;
-  flex-direction: column;
-  gap: 3rem;
-  padding-top: 3rem;
   overflow-x: hidden;
 }
 
 body > * {
   width: 100%;
+  padding: 3rem 0;
 }
 
 .background-square {
@@ -116,7 +113,6 @@ body > * {
 .contacts-section {
   color: white;
   background-color: var(--main-color);
-  padding: 3rem 0;
 }
 
 .contacts-section > .wrapper {
@@ -126,8 +122,6 @@ body > * {
 .contacts {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
-  flex: 1;
   justify-content: space-between;
   font-size: large;
 }
@@ -147,6 +141,5 @@ body > * {
 }
 
 .contact-picture {
-  height: 400px;
-  width: 400px;
+  height: 350px;
 }
