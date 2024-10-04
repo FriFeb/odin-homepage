@@ -66,19 +66,11 @@ body {
   color: white;
   font-weight: normal;
   text-shadow: 3px 3px black;
-  left: 50%;
   bottom: 2%;
-  transform: translateX(-50%);
   width: max-content;
-}
-
-.responsive-name {
-  display: none;
-  position: absolute;
-  z-index: 1;
-  color: white;
-  font-weight: normal;
-  text-shadow: 3px 3px black;
+  margin: auto;
+  left: 0;
+  right: 0;
 }
 
 .personal-picture {
@@ -202,18 +194,15 @@ body {
   }
 
   .name {
-    display: none;
-  }
-
-  .responsive-name {
-    display: block;
-    right: 0;
+    left: auto;
+    bottom: auto;
     margin-top: 1rem;
   }
 
-  .personal-picture {
+  .picture-group {
     float: left;
     margin-right: 1rem;
+    position: initial;
   }
 
   .personal-info {
@@ -249,20 +238,17 @@ body {
   }
 
   .picture-group {
+    position: relative;
+    float: none;
     margin: 1rem 2rem;
   }
 
   .name {
-    display: block;
-  }
-
-  .responsive-name {
-    display: none;
+    left: 0;
+    bottom: 2%;
   }
 
   .personal-picture {
-    float: none;
-    margin-right: 0;
     width: 100%;
   }
 
@@ -302,6 +288,6 @@ body {
     width: 80%;
     text-wrap: wrap;
     left: 2%;
-    transform: translateX(0%);
+    right: auto;
   }
 }
