@@ -12,24 +12,36 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto&display=swap"
       rel="stylesheet"
     />
   </head>
   <body>
-    <div class="background-square"></div>
     <header class="personal-section">
-      <div class="wrapper">
-        <img
-          src="../assets/header.webp"
-          alt="my personal picture"
-          class="personal-picture"
-        />
-        <div class="personal-info">
+      <div class="personal-section-background"></div>
+      <div class="wrapper personal-section-wrapper">
+        <h1 class="responsive-name">Ashley Williams</h1>
+
+        <section class="picture-group">
+          <h1 id="name" class="name">Ashley Williams</h1>
+          <img
+            srcset="
+              ../assets/header-350w.webp 350w,
+              ../assets/header-450w.webp 450w,
+              ../assets/header-600w.webp 600w
+            "
+            sizes="
+            (max-width: 500px) calc(100vw - 2rem), 
+            (max-width: 700px) calc(100vw - 96px),
+            350px
+            "
+            src="../assets/header-600w.webp"
+            alt=""
+            class="personal-picture"
+          />
+        </section>
+
+        <section class="personal-info">
           <h2>About me</h2>
           <p class="personal-description">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia a
@@ -51,12 +63,12 @@
               <a href=""><i class="mdi mdi-twitter"></i></a>
             </li>
           </ul>
-        </div>
+        </section>
       </div>
     </header>
 
     <main>
-      <div class="wrapper">
+      <div class="wrapper main-wrapper">
         <h2>My projects</h2>
         <div class="projects">
           <article class="project">
@@ -184,7 +196,7 @@
     </main>
 
     <footer class="contacts-section">
-      <div class="wrapper">
+      <div class="wrapper contacts-section-wrapper">
         <div class="contacts">
           <h2>Contact me</h2>
           <p>
@@ -193,16 +205,16 @@
             magnam iste est quos? Eveniet dolor dolorem dolore facilis eum.
             Dolorem, sint officia.
           </p>
-          <address class="contact addaddressress">
+          <address class="contact">
             <i class="mdi mdi-home"></i>
 
             <span>12345 Random Road, California, Random Town, 12345</span>
           </address>
-          <div class="contact phone-number">
+          <div class="contact">
             <i class="mdi mdi-phone"></i>
             <span>12345-12345</span>
           </div>
-          <div class="contact email">
+          <div class="contact">
             <i class="mdi mdi-email"></i>
             <span>randommail@gmail.com</span>
           </div>
@@ -218,7 +230,7 @@
             </li>
           </ul>
         </div>
-        <img src="../assets/footer.webp" alt="" class="contact-picture" />
+        <img src="../assets/footer-300w.webp" alt="" class="contact-picture" />
       </div>
     </footer>
   </body>
