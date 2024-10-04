@@ -29,7 +29,6 @@ ul {
 
 body {
   font-family: 'Roboto', sans-serif;
-  overflow-x: hidden;
 }
 
 .wrapper {
@@ -43,13 +42,13 @@ body {
   overflow-x: hidden;
 }
 
-.personal-section-background {
-  position: absolute;
-  z-index: -1;
-  background-color: var(--main-color);
+.personal-section::before {
+  content: '';
   width: 100%;
-  height: 700px;
-  transform: skew(-10deg) rotate(-10deg) translateY(-400px);
+  height: 100%;
+  position: absolute;
+  background-color: var(--main-color);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 0% 100%);
 }
 
 .personal-section-wrapper {
@@ -188,10 +187,6 @@ body {
     text-align: center;
   }
 
-  .personal-section-background {
-    transform: skew(-15deg) rotate(-15deg) translateY(-400px);
-  }
-
   .wrapper {
     padding: 2rem;
   }
@@ -200,6 +195,10 @@ body {
     display: block;
     margin: 2rem;
     padding: 1px;
+  }
+
+  .personal-section::before {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 30%, 0% 80%);
   }
 
   .name {
@@ -245,6 +244,10 @@ body {
     margin: 0;
   }
 
+  .personal-section::before {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 30%, 0% 50%);
+  }
+
   .picture-group {
     margin: 1rem 2rem;
   }
@@ -279,12 +282,12 @@ body {
     padding: 1rem;
   }
 
-  .main-wrapper {
-    padding: 1rem 0;
+  .personal-section::before {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 10%, 0% 40%);
   }
 
-  .personal-section-background {
-    transform: skew(-30deg) rotate(-30deg) translateY(-400px);
+  .main-wrapper {
+    padding: 1rem 0;
   }
 
   .personal-links {
