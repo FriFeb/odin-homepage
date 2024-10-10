@@ -1,8 +1,11 @@
+:root {
+  --main-color: hsl(205 100% 30% / 1);
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  --main-color: hsl(205 100% 30% / 1);
 }
 
 h1,
@@ -29,6 +32,7 @@ ul {
 
 body {
   font-family: 'Roboto', sans-serif;
+  overflow-x: hidden;
 }
 
 .visually-hidden {
@@ -77,6 +81,20 @@ body {
   margin: auto;
   left: 0;
   right: 0;
+  white-space: nowrap;
+}
+
+.name > div {
+  display: inline-block;
+  overflow: hidden;
+}
+
+.first-name {
+  animation: reveal 4s, left-slide 4s;
+}
+
+.second-name > span {
+  animation: right-slide 4s;
 }
 
 .personal-picture {
@@ -120,6 +138,11 @@ body {
   margin: 1rem;
   border-radius: 8px;
   box-shadow: rgba(0, 0, 0, 0.2) 3px 3px 3px;
+  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.project:hover {
+  transform: translateY(-10px);
 }
 
 .project-picture {
@@ -179,6 +202,45 @@ body {
 
 .contact-picture {
   height: 350px;
+}
+
+i:hover::before,
+a:focus i::before {
+  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: scale(1.3);
+}
+
+@keyframes reveal {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+}
+
+@keyframes left-slide {
+  0% {
+    margin-left: 30%;
+  }
+  20% {
+    margin-left: 30%;
+  }
+  50% {
+    margin-left: 0;
+  }
+}
+
+@keyframes right-slide {
+  0% {
+    margin-left: -150%;
+  }
+  30% {
+    margin-left: -150%;
+  }
+  55% {
+    margin-left: 0;
+  }
 }
 
 @media (max-width: 1240px) {
