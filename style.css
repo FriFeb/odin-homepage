@@ -12,6 +12,7 @@ h1,
 h2,
 h3 {
   font-family: 'Playfair Display', system-ui;
+  font-display: swap;
 }
 
 h1 {
@@ -32,7 +33,7 @@ ul {
 
 body {
   font-family: 'Roboto', sans-serif;
-  overflow-x: hidden;
+  font-display: swap;
 }
 
 .visually-hidden {
@@ -90,11 +91,11 @@ body {
 }
 
 .first-name {
-  animation: reveal 4s, left-slide 4s;
+  animation: reveal 5s, left-slide 5s;
 }
 
 .second-name > span {
-  animation: right-slide 4s;
+  animation: right-slide 5s;
 }
 
 .personal-picture {
@@ -130,6 +131,7 @@ body {
   justify-items: center;
   row-gap: 2rem;
   margin-top: 1rem;
+  overflow: hidden;
 }
 
 .project {
@@ -202,6 +204,7 @@ body {
 
 .contact-picture {
   height: 350px;
+  width: auto;
 }
 
 i:hover::before,
@@ -214,7 +217,10 @@ a:focus i::before {
   0% {
     opacity: 0;
   }
-  20% {
+  10% {
+    opacity: 0;
+  }
+  30% {
     opacity: 1;
   }
 }
@@ -223,10 +229,10 @@ a:focus i::before {
   0% {
     margin-left: 30%;
   }
-  20% {
+  30% {
     margin-left: 30%;
   }
-  50% {
+  60% {
     margin-left: 0;
   }
 }
@@ -235,10 +241,10 @@ a:focus i::before {
   0% {
     margin-left: -150%;
   }
-  30% {
+  40% {
     margin-left: -150%;
   }
-  55% {
+  65% {
     margin-left: 0;
   }
 }
